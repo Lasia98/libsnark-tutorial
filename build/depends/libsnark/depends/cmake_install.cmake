@@ -1,4 +1,4 @@
-# Install script for directory: /root/libsnark-tutorial/depends/libsnark/depends
+# Install script for directory: /home/luzy/libsnark-tutorial/depends/libsnark/depends
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/root/libsnark-tutorial/build/depends/libsnark/depends/libff/cmake_install.cmake")
-  include("/root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/cmake_install.cmake")
+  include("/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/cmake_install.cmake")
+  include("/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/cmake_install.cmake")
 
 endif()
 

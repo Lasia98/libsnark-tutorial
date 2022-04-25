@@ -23,12 +23,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ff.dir/common/double.cpp.o"
   "CMakeFiles/ff.dir/common/profiling.cpp.o"
   "CMakeFiles/ff.dir/common/utils.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g1.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g2.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_gt.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_init.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pairing.cpp.o"
-  "CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pp.cpp.o"
   "libff.pdb"
   "libff.a"
 )

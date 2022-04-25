@@ -126,6 +126,7 @@ T multi_exp_inner(
     typename std::vector<FieldT>::const_iterator scalar_start,
     typename std::vector<FieldT>::const_iterator scalar_end)
 {
+    printf("!!!!!!multi_exp_inner4\n");
     T result(T::zero());
 
     typename std::vector<T>::const_iterator vec_it;
@@ -149,6 +150,7 @@ T multi_exp_inner(
     typename std::vector<FieldT>::const_iterator scalar_start,
     typename std::vector<FieldT>::const_iterator scalar_end)
 {
+    printf("!!!!!!multi_exp_inner3\n");
     T result(T::zero());
 
     typename std::vector<T>::const_iterator vec_it;
@@ -171,6 +173,7 @@ T multi_exp_inner(
     typename std::vector<FieldT>::const_iterator exponents,
     typename std::vector<FieldT>::const_iterator exponents_end)
 {
+    printf("!!!!!!multi_exp_inner2\n");
     UNUSED(exponents_end);
     size_t length = bases_end - bases;
 
@@ -186,7 +189,9 @@ T multi_exp_inner(
     for (size_t i = 0; i < length; i++)
     {
         bn_exponents[i] = exponents[i].as_bigint();
-        num_bits = std::max(num_bits, bn_exponents[i].num_bits());
+	//std::cout << exponents[i] << '\n';
+	//std::cout << std::hex << bn_exponents[i] << '\n';
+	num_bits = std::max(num_bits, bn_exponents[i].num_bits());
     }
 
     size_t num_groups = (num_bits + c - 1) / c;
@@ -290,7 +295,7 @@ T multi_exp_inner(
     typename std::vector<FieldT>::const_iterator scalar_start,
     typename std::vector<FieldT>::const_iterator scalar_end)
 {
-    printf("1111111111111111111111\n");
+    printf("!!!!!!multi_exp_inner1\n");
     const mp_size_t n = std::remove_reference<decltype(*scalar_start)>::type::num_limbs;
 
     if (vec_start == vec_end)
@@ -474,7 +479,7 @@ T multi_exp_with_mixed_addition(typename std::vector<T>::const_iterator vec_star
     for (; scalar_it != scalar_end; ++scalar_it, ++value_it)
     {
     	//printf("!!!!!!multi_exp_with_mixed_addition\n");
-	std::cout << "!!!!!!scalar_it:" << *scalar_it << '\n';
+	//std::cout << "!!!!!!scalar_it:" << *scalar_it << '\n';
         if (*scalar_it == zero)
         {
             // do nothing

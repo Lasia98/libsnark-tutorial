@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Include any dependencies generated for this target.
 include depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/depend.make
@@ -59,16 +59,16 @@ include depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/fl
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o: depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/flags.make
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o: ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o"
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o -c /root/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o -c /home/luzy/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.i"
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp > CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.i
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luzy/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp > CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.i
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.s"
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp -o CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.s
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luzy/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp -o CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.s
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/zk_proof_systems/ppzksnark/ram_ppzksnark/examples/demo_ram_ppzksnark_generator.cpp.o.requires:
 
@@ -96,10 +96,9 @@ depends/libsnark/libsnark/demo_ram_ppzksnark_generator: depends/libsnark/depends
 depends/libsnark/libsnark/demo_ram_ppzksnark_generator: /usr/lib/x86_64-linux-gnu/libgmp.so
 depends/libsnark/libsnark/demo_ram_ppzksnark_generator: /usr/lib/x86_64-linux-gnu/libgmp.so
 depends/libsnark/libsnark/demo_ram_ppzksnark_generator: /usr/lib/x86_64-linux-gnu/libgmpxx.so
-depends/libsnark/libsnark/demo_ram_ppzksnark_generator: depends/libsnark/depends/libzm.a
 depends/libsnark/libsnark/demo_ram_ppzksnark_generator: depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable demo_ram_ppzksnark_generator"
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_ram_ppzksnark_generator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable demo_ram_ppzksnark_generator"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_ram_ppzksnark_generator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/build: depends/libsnark/libsnark/demo_ram_ppzksnark_generator
@@ -111,10 +110,10 @@ depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/requires: 
 .PHONY : depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/requires
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/demo_ram_ppzksnark_generator.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/demo_ram_ppzksnark_generator.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/clean
 
 depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark/libsnark /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark/libsnark /root/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark/libsnark /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/libsnark/CMakeFiles/demo_ram_ppzksnark_generator.dir/depend
 

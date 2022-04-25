@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  -std=c++11 -Wall -Wextra -Wfatal-errors -pthread -ggdb3 -O2 -march=native -mtune=native -O2 -g -DNDEBUG  
 
-CXX_DEFINES = -DBN_SUPPORT_SNARK=1 -DCURVE_BN128
+CXX_DEFINES = -DCURVE_MNT4
 
-CXX_INCLUDES = -I/root/libsnark-tutorial/. -I/root/libsnark-tutorial/src/. -I/root/libsnark-tutorial/depends/libsnark -I/root/libsnark-tutorial/depends/libsnark/depends/libfqfft -I/root/libsnark-tutorial/depends/libff -I/root/libsnark-tutorial/depends/libfqfft -I/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/.. -isystem /usr/include/x86_64-linux-gnu 
+CXX_INCLUDES = -I/home/luzy/libsnark-tutorial/. -I/home/luzy/libsnark-tutorial/src/. -I/home/luzy/libsnark-tutorial/depends/libsnark -I/home/luzy/libsnark-tutorial/depends/libsnark/depends/libfqfft -I/home/luzy/libsnark-tutorial/depends/libff -I/home/luzy/libsnark-tutorial/depends/libfqfft -I/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/.. -isystem /usr/include/x86_64-linux-gnu 
 

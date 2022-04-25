@@ -27,7 +27,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g1.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g1.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_g2.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/alt_bn128/alt_bn128_g2.hpp
@@ -55,7 +55,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g2.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g2.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_init.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/alt_bn128/alt_bn128_g1.hpp
@@ -84,7 +84,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_init.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_init.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pairing.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/alt_bn128/alt_bn128_g1.hpp
@@ -115,7 +115,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pairing.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pairing.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pp.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/alt_bn128/alt_bn128_g1.hpp
@@ -146,168 +146,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pp.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g1.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g1.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_init.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/public_params.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_g1.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g2.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g2.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_init.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/public_params.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_g2.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_gt.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_gt.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_gt.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_init.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g1.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g2.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_gt.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_init.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/public_params.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_init.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pairing.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g1.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g2.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_gt.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_init.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_pairing.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/public_params.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/profiling.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_pairing.cpp
- /usr/include/x86_64-linux-gnu/gmp.h
-depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pp.cpp.o
- ../depends/libsnark/./depends/ate-pairing/include/bn.h
- ../depends/libsnark/./depends/ate-pairing/include/zm.h
- ../depends/libsnark/./depends/ate-pairing/include/zm2.h
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g1.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_g2.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_gt.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_init.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_pairing.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/bn128/bn128_pp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/public_params.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/exponentiation/exponentiation.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/field_utils.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.hpp
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp.tcc
- ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/fp_aux.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/profiling.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
- ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_pp.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pp.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g1.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -337,7 +176,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/ed
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g1.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g1.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g2.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -367,7 +206,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/ed
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g2.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g2.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_init.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -398,7 +237,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/ed
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_init.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_init.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pairing.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -431,7 +270,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/ed
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pairing.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pairing.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pp.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -464,7 +303,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/ed
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pp.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pp.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g1.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -493,7 +332,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g1.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g1.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g2.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -522,7 +361,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g2.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g2.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_init.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -552,7 +391,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_init.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_init.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pairing.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -584,7 +423,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pairing.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pairing.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pp.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -616,7 +455,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pp.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pp.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt46_common.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/mnt/mnt46_common.hpp
@@ -626,7 +465,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt46_
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt46_common.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt46_common.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g1.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -657,7 +496,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g1.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g1.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g2.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -688,7 +527,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g2.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g2.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_init.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -720,7 +559,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_init.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_init.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pairing.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -754,7 +593,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pairing.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pairing.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pp.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/curves/curve_utils.hpp
@@ -788,7 +627,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/m
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pp.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pp.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/double.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/algebra/fields/bigint.hpp
@@ -798,7 +637,7 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/double.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/double.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/double.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/profiling.cpp.o
  ../depends/libsnark/./depends/ate-pairing/include/bn.h
@@ -864,9 +703,9 @@ depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/profiling.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/profiling.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/profiling.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
 depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/utils.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/utils.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/utils.cpp

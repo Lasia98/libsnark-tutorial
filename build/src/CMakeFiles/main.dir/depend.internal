@@ -113,5 +113,5 @@ src/CMakeFiles/main.dir/main.cpp.o
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/r1cs_gg_ppzksnark.hpp
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/r1cs_gg_ppzksnark.tcc
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/r1cs_gg_ppzksnark_params.hpp
- /root/libsnark-tutorial/src/main.cpp
+ /home/luzy/libsnark-tutorial/src/main.cpp
  /usr/include/x86_64-linux-gnu/gmp.h

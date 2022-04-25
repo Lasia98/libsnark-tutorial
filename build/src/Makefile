@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles /root/libsnark-tutorial/build/src/CMakeFiles/progress.marks
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles 0
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles /home/luzy/libsnark-tutorial/build/src/CMakeFiles/progress.marks
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/main.dir/rule:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
 .PHONY : src/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ main: src/CMakeFiles/main.dir/rule
 
 # fast build rule for target.
 main/fast:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
 main.o: main.cpp.o
@@ -177,7 +177,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -186,7 +186,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -195,7 +195,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

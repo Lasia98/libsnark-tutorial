@@ -1058,7 +1058,7 @@ libff/common/utils.tcc
 
 ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/data_structures/integer_permutation.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/data_structures/integer_permutation.cpp
 algorithm
 -
 cassert
@@ -1070,47 +1070,47 @@ unordered_set
 libsnark/common/data_structures/integer_permutation.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/data_structures/set_commitment.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/data_structures/set_commitment.cpp
 libff/common/serialization.hpp
 -
 libsnark/common/data_structures/set_commitment.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkpcd_pp.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkpcd_pp.cpp
 libsnark/common/default_types/r1cs_ppzkpcd_pp.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/tinyram_ppzksnark_pp.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/tinyram_ppzksnark_pp.cpp
 libsnark/common/default_types/tinyram_ppzksnark_pp.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/tinyram_zksnark_pp.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/tinyram_zksnark_pp.cpp
 libsnark/common/default_types/tinyram_zksnark_pp.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/routing_algorithms/as_waksman_routing_algorithm.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/routing_algorithms/as_waksman_routing_algorithm.cpp
 cassert
 -
 libsnark/common/routing_algorithms/as_waksman_routing_algorithm.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/routing_algorithms/benes_routing_algorithm.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/routing_algorithms/benes_routing_algorithm.cpp
 cassert
 -
 libsnark/common/routing_algorithms/benes_routing_algorithm.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib1/constraint_profiling.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib1/constraint_profiling.cpp
 libff/common/profiling.hpp
 -
 libsnark/gadgetlib1/constraint_profiling.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/adapters.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/adapters.cpp
 libsnark/gadgetlib2/adapters.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/constraint.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/constraint.cpp
 algorithm
 -
 cassert
@@ -1126,7 +1126,7 @@ libsnark/gadgetlib2/constraint.hpp
 libsnark/gadgetlib2/variable.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/gadget.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/gadget.cpp
 cmath
 -
 memory
@@ -1134,7 +1134,7 @@ memory
 libsnark/gadgetlib2/gadget.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/infrastructure.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/infrastructure.cpp
 cassert
 -
 climits
@@ -1150,13 +1150,13 @@ unistd.h
 execinfo.h
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/integration.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/integration.cpp
 libsnark/gadgetlib2/adapters.hpp
 -
 libsnark/gadgetlib2/integration.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/pp.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/pp.cpp
 cassert
 -
 vector
@@ -1164,13 +1164,13 @@ vector
 libsnark/gadgetlib2/pp.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/protoboard.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/protoboard.cpp
 cstdio
 -
 libsnark/gadgetlib2/protoboard.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/variable.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/gadgetlib2/variable.cpp
 climits
 -
 iostream
@@ -1188,7 +1188,7 @@ libsnark/gadgetlib2/pp.hpp
 libsnark/gadgetlib2/variable.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/relations/circuit_satisfaction_problems/tbcs/tbcs.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/relations/circuit_satisfaction_problems/tbcs/tbcs.cpp
 algorithm
 -
 libff/common/utils.hpp
@@ -1196,23 +1196,23 @@ libff/common/utils.hpp
 libsnark/relations/circuit_satisfaction_problems/tbcs/tbcs.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/memory/memory_store_trace.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/memory/memory_store_trace.cpp
 libsnark/relations/ram_computations/memory/memory_store_trace.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/memory/ra_memory.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/memory/ra_memory.cpp
 cassert
 -
 libsnark/relations/ram_computations/memory/ra_memory.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/rams/fooram/fooram_aux.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/rams/fooram/fooram_aux.cpp
 libff/common/serialization.hpp
 -
 libsnark/relations/ram_computations/rams/fooram/fooram_aux.hpp
 -
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/rams/tinyram/tinyram_aux.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/relations/ram_computations/rams/tinyram/tinyram_aux.cpp
 cassert
 -
 fstream

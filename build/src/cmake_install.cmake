@@ -1,4 +1,4 @@
-# Install script for directory: /root/libsnark-tutorial/src
+# Install script for directory: /home/luzy/libsnark-tutorial/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

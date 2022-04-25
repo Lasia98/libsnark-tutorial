@@ -4,15 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc" "/root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BINARY_OUTPUT"
-  "BN_SUPPORT_SNARK=1"
-  "CURVE_BN128"
+  "CURVE_MNT4"
   "DEBUG=1"
   "MONTGOMERY_OUTPUT"
   "USE_ASM"
@@ -28,7 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

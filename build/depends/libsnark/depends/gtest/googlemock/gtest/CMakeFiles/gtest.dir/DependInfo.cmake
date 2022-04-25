@@ -4,15 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest-all.cc" "/root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest-all.cc" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BINARY_OUTPUT"
-  "BN_SUPPORT_SNARK=1"
-  "CURVE_BN128"
+  "CURVE_MNT4"
   "DEBUG=1"
   "MONTGOMERY_OUTPUT"
   "USE_ASM"

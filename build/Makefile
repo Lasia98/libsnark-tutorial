@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles /root/libsnark-tutorial/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles /home/luzy/libsnark-tutorial/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -194,19 +194,6 @@ snark_supercop: cmake_check_build_system
 snark_supercop/fast:
 	$(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build
 .PHONY : snark_supercop/fast
-
-#=============================================================================
-# Target rules for targets named zm
-
-# Build rule for target.
-zm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 zm
-.PHONY : zm
-
-# fast build rule for target.
-zm/fast:
-	$(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/build
-.PHONY : zm/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -1315,7 +1302,6 @@ help:
 	@echo "... doc"
 	@echo "... check"
 	@echo "... snark_supercop"
-	@echo "... zm"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

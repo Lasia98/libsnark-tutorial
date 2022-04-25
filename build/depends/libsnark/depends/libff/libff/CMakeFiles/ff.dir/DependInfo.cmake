@@ -4,44 +4,37 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g1.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_g1.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g2.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_g2.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_init.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_init.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pairing.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pairing.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pp.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pp.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_g1.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g1.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_g2.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_g2.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_gt.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_gt.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_init.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_init.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_pairing.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pairing.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/bn128/bn128_pp.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/bn128/bn128_pp.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g1.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g1.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g2.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g2.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_init.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_init.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pairing.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pairing.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pp.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pp.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g1.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g1.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g2.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g2.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_init.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_init.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pairing.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pairing.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pp.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pp.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt46_common.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt46_common.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g1.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g1.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g2.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g2.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_init.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_init.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pairing.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pairing.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pp.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pp.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/double.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/double.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/profiling.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/profiling.cpp.o"
-  "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/utils.cpp" "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/utils.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g1.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_g1.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g2.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_g2.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_init.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_init.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pairing.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pairing.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_pp.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/alt_bn128/alt_bn128_pp.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g1.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g1.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_g2.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_g2.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_init.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_init.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pairing.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pairing.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/edwards/edwards_pp.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/edwards/edwards_pp.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g1.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g1.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_g2.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_g2.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_init.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_init.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pairing.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pairing.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt4/mnt4_pp.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt4/mnt4_pp.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt46_common.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt46_common.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g1.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g1.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_g2.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_g2.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_init.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_init.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pairing.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pairing.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/algebra/curves/mnt/mnt6/mnt6_pp.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/algebra/curves/mnt/mnt6/mnt6_pp.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/double.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/double.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/profiling.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/profiling.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/common/utils.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/common/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BINARY_OUTPUT"
-  "BN_SUPPORT_SNARK=1"
-  "CURVE_BN128"
+  "CURVE_MNT4"
   "DEBUG=1"
   "MONTGOMERY_OUTPUT"
   "USE_ASM"
@@ -51,8 +44,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../."
   "../depends/libsnark/."
-  "../depends/libsnark/depends/ate-pairing/include"
-  "../depends/libsnark/depends/xbyak"
   "../depends/libsnark/depends/libsnark-supercop/include"
   "../depends/libsnark/depends/libff/libff/.."
   "/usr/include/x86_64-linux-gnu"
@@ -60,7 +51,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/zm.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

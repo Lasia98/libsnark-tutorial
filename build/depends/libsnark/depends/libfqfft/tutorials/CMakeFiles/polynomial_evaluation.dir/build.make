@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Include any dependencies generated for this target.
 include depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/depend.make
@@ -59,16 +59,16 @@ include depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evalua
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o: depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/flags.make
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o: ../depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o -c /root/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o -c /home/luzy/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.i"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp > CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.i
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luzy/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp > CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.i
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.s"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp -o CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.s
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luzy/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation_example.cpp -o CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.s
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/polynomial_evaluation_example.cpp.o.requires:
 
@@ -92,10 +92,9 @@ depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: depends/libsn
 depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/build.make
 depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: depends/libsnark/depends/libff/libff/libff.a
 depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: /usr/lib/x86_64-linux-gnu/libgmp.so
-depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: depends/libsnark/depends/libzm.a
 depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation: depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable polynomial_evaluation"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/polynomial_evaluation.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable polynomial_evaluation"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/polynomial_evaluation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/build: depends/libsnark/depends/libfqfft/tutorials/polynomial_evaluation
@@ -107,10 +106,10 @@ depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir
 .PHONY : depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/requires
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && $(CMAKE_COMMAND) -P CMakeFiles/polynomial_evaluation.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials && $(CMAKE_COMMAND) -P CMakeFiles/polynomial_evaluation.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/clean
 
 depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials /root/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark/depends/libfqfft/tutorials /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/depends/libfqfft/tutorials/CMakeFiles/polynomial_evaluation.dir/depend
 

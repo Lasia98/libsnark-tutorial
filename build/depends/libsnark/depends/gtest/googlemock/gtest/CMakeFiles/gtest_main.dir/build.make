@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Include any dependencies generated for this target.
 include depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend.make
@@ -59,16 +59,16 @@ include depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.di
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/flags.make
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: ../depends/libsnark/depends/gtest/googletest/src/gtest_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/src/gtest_main.cc.i"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/src/gtest_main.cc.s"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.requires:
 
@@ -91,9 +91,9 @@ gtest_main_EXTERNAL_OBJECTS =
 depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a: depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a: depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make
 depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a: depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest_main.a"
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest_main.a"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build: depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a
@@ -105,10 +105,10 @@ depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/requir
 .PHONY : depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/requires
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 
 depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest /root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/depends/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 

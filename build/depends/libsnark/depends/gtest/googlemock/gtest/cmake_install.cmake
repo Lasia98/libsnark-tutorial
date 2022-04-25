@@ -1,4 +1,4 @@
-# Install script for directory: /root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest
+# Install script for directory: /home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/libgtest.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/libgtest.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/gtest/googlemock/gtest/libgtest_main.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/root/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/include/gtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/luzy/libsnark-tutorial/depends/libsnark/depends/gtest/googletest/include/gtest")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES
-    "/root/libsnark-tutorial/build/gtest.pc"
-    "/root/libsnark-tutorial/build/gtest_main.pc"
+    "/home/luzy/libsnark-tutorial/build/gtest.pc"
+    "/home/luzy/libsnark-tutorial/build/gtest_main.pc"
     )
 endif()
 

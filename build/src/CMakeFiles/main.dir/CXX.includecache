@@ -966,7 +966,7 @@ libff/algebra/curves/public_params.hpp
 libsnark/relations/constraint_satisfaction_problems/r1cs/r1cs.hpp
 -
 
-/root/libsnark-tutorial/src/main.cpp
+/home/luzy/libsnark-tutorial/src/main.cpp
 libff/common/default_types/ec_pp.hpp
 -
 libsnark/common/default_types/r1cs_gg_ppzksnark_pp.hpp

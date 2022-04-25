@@ -640,7 +640,7 @@ libff/common/utils.tcc
 
 ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
 
-/root/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkadsnark_pp.cpp
+/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkadsnark_pp.cpp
 libsnark/common/default_types/r1cs_ppzkadsnark_pp.hpp
 -
 

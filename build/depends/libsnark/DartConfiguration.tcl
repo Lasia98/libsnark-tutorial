@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /root/libsnark-tutorial/depends/libsnark
-BuildDirectory: /root/libsnark-tutorial/build/depends/libsnark
+SourceDirectory: /home/luzy/libsnark-tutorial/depends/libsnark
+BuildDirectory: /home/luzy/libsnark-tutorial/build/depends/libsnark
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: c-10-100-63-1
+Site: P720
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -36,7 +36,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/root/libsnark-tutorial/depends/libsnark"
+ConfigureCommand: "/usr/bin/cmake" "/home/luzy/libsnark-tutorial/depends/libsnark"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 

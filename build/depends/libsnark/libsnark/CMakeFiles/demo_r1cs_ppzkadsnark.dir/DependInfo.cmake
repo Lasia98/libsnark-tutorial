@@ -4,15 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzkadsnark/r1cs_ppzkadsnark/examples/demo_r1cs_ppzkadsnark.cpp" "/root/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/demo_r1cs_ppzkadsnark.dir/zk_proof_systems/ppzkadsnark/r1cs_ppzkadsnark/examples/demo_r1cs_ppzkadsnark.cpp.o"
+  "/home/luzy/libsnark-tutorial/depends/libsnark/libsnark/zk_proof_systems/ppzkadsnark/r1cs_ppzkadsnark/examples/demo_r1cs_ppzkadsnark.cpp" "/home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/demo_r1cs_ppzkadsnark.dir/zk_proof_systems/ppzkadsnark/r1cs_ppzkadsnark/examples/demo_r1cs_ppzkadsnark.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BINARY_OUTPUT"
-  "BN_SUPPORT_SNARK=1"
-  "CURVE_BN128"
+  "CURVE_MNT4"
   "DEBUG=1"
   "MONTGOMERY_OUTPUT"
   "USE_ASM"
@@ -30,11 +29,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/snark_adsnark.dir/DependInfo.cmake"
-  "/root/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/snark.dir/DependInfo.cmake"
-  "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/DependInfo.cmake"
-  "/root/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/zm.dir/DependInfo.cmake"
-  "/root/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/snark_supercop.dir/DependInfo.cmake"
+  "/home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/snark_adsnark.dir/DependInfo.cmake"
+  "/home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/snark.dir/DependInfo.cmake"
+  "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/CMakeFiles/ff.dir/DependInfo.cmake"
+  "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/snark_supercop.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

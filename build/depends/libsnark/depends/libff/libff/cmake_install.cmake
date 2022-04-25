@@ -1,4 +1,4 @@
-# Install script for directory: /root/libsnark-tutorial/depends/libsnark/depends/libff/libff
+# Install script for directory: /home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/libff" TYPE DIRECTORY FILES "/root/libsnark-tutorial/depends/libsnark/depends/libff/libff/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.tcc$" REGEX "/tests$" EXCLUDE REGEX "/examples$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/libff" TYPE DIRECTORY FILES "/home/luzy/libsnark-tutorial/depends/libsnark/depends/libff/libff/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.tcc$" REGEX "/tests$" EXCLUDE REGEX "/examples$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/libff.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/luzy/libsnark-tutorial/build/depends/libsnark/depends/libff/libff/libff.a")
 endif()
 

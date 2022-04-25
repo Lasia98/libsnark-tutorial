@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Utility rule file for ContinuousBuild.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
 include depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/progress.make
 
 depends/libsnark/libsnark/CMakeFiles/ContinuousBuild:
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/ctest -D ContinuousBuild
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && /usr/bin/ctest -D ContinuousBuild
 
 ContinuousBuild: depends/libsnark/libsnark/CMakeFiles/ContinuousBuild
 ContinuousBuild: depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/build.make
@@ -67,10 +67,10 @@ depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/build: ContinuousBuild
 .PHONY : depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/build
 
 depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/ContinuousBuild.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/ContinuousBuild.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/clean
 
 depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark/libsnark /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark/libsnark /root/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark/libsnark /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark /home/luzy/libsnark-tutorial/build/depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/libsnark/CMakeFiles/ContinuousBuild.dir/depend
 

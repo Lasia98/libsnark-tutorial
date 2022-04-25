@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Utility rule file for doc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
 include depends/libsnark/CMakeFiles/doc.dir/progress.make
 
 depends/libsnark/CMakeFiles/doc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Translating from markdown to HTML"
-	cd /root/libsnark-tutorial/build/depends/libsnark && MARKDOWN-NOTFOUND -f /root/libsnark-tutorial/build/depends/libsnark/README.html -x toc -x extra --noisy /root/libsnark-tutorial/depends/libsnark/README.md
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luzy/libsnark-tutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Translating from markdown to HTML"
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark && MARKDOWN-NOTFOUND -f /home/luzy/libsnark-tutorial/build/depends/libsnark/README.html -x toc -x extra --noisy /home/luzy/libsnark-tutorial/depends/libsnark/README.md
 
 doc: depends/libsnark/CMakeFiles/doc
 doc: depends/libsnark/CMakeFiles/doc.dir/build.make
@@ -68,10 +68,10 @@ depends/libsnark/CMakeFiles/doc.dir/build: doc
 .PHONY : depends/libsnark/CMakeFiles/doc.dir/build
 
 depends/libsnark/CMakeFiles/doc.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/doc.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/doc.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/CMakeFiles/doc.dir/clean
 
 depends/libsnark/CMakeFiles/doc.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark /root/libsnark-tutorial/build/depends/libsnark/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark /home/luzy/libsnark-tutorial/build/depends/libsnark/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/CMakeFiles/doc.dir/depend
 

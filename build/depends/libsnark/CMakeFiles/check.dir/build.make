@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 # Utility rule file for check.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
 include depends/libsnark/CMakeFiles/check.dir/progress.make
 
 depends/libsnark/CMakeFiles/check:
-	cd /root/libsnark-tutorial/build/depends/libsnark && /usr/bin/ctest
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark && /usr/bin/ctest
 
 check: depends/libsnark/CMakeFiles/check
 check: depends/libsnark/CMakeFiles/check.dir/build.make
@@ -67,10 +67,10 @@ depends/libsnark/CMakeFiles/check.dir/build: check
 .PHONY : depends/libsnark/CMakeFiles/check.dir/build
 
 depends/libsnark/CMakeFiles/check.dir/clean:
-	cd /root/libsnark-tutorial/build/depends/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
+	cd /home/luzy/libsnark-tutorial/build/depends/libsnark && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
 .PHONY : depends/libsnark/CMakeFiles/check.dir/clean
 
 depends/libsnark/CMakeFiles/check.dir/depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/libsnark-tutorial /root/libsnark-tutorial/depends/libsnark /root/libsnark-tutorial/build /root/libsnark-tutorial/build/depends/libsnark /root/libsnark-tutorial/build/depends/libsnark/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luzy/libsnark-tutorial /home/luzy/libsnark-tutorial/depends/libsnark /home/luzy/libsnark-tutorial/build /home/luzy/libsnark-tutorial/build/depends/libsnark /home/luzy/libsnark-tutorial/build/depends/libsnark/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : depends/libsnark/CMakeFiles/check.dir/depend
 

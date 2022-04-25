@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/libsnark-tutorial
+CMAKE_SOURCE_DIR = /home/luzy/libsnark-tutorial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/libsnark-tutorial/build
+CMAKE_BINARY_DIR = /home/luzy/libsnark-tutorial/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,30 +67,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,16 +100,40 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles /root/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/progress.marks
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/libsnark-tutorial/build/CMakeFiles 0
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles /home/luzy/libsnark-tutorial/build/depends/libsnark/depends/CMakeFiles/progress.marks
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luzy/libsnark-tutorial/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/clean
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/preinstall
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/preinstall
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 depends/libsnark/depends/CMakeFiles/snark_supercop.dir/rule:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/CMakeFiles/snark_supercop.dir/rule
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/CMakeFiles/snark_supercop.dir/rule
 .PHONY : depends/libsnark/depends/CMakeFiles/snark_supercop.dir/rule
 
 # Convenience name for target.
@@ -168,77 +168,8 @@ snark_supercop: depends/libsnark/depends/CMakeFiles/snark_supercop.dir/rule
 
 # fast build rule for target.
 snark_supercop/fast:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build
 .PHONY : snark_supercop/fast
-
-# Convenience name for target.
-depends/libsnark/depends/CMakeFiles/zm.dir/rule:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 depends/libsnark/depends/CMakeFiles/zm.dir/rule
-.PHONY : depends/libsnark/depends/CMakeFiles/zm.dir/rule
-
-# Convenience name for target.
-zm: depends/libsnark/depends/CMakeFiles/zm.dir/rule
-
-.PHONY : zm
-
-# fast build rule for target.
-zm/fast:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/build
-.PHONY : zm/fast
-
-ate-pairing/src/zm.o: ate-pairing/src/zm.cpp.o
-
-.PHONY : ate-pairing/src/zm.o
-
-# target to build an object file
-ate-pairing/src/zm.cpp.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm.cpp.o
-.PHONY : ate-pairing/src/zm.cpp.o
-
-ate-pairing/src/zm.i: ate-pairing/src/zm.cpp.i
-
-.PHONY : ate-pairing/src/zm.i
-
-# target to preprocess a source file
-ate-pairing/src/zm.cpp.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm.cpp.i
-.PHONY : ate-pairing/src/zm.cpp.i
-
-ate-pairing/src/zm.s: ate-pairing/src/zm.cpp.s
-
-.PHONY : ate-pairing/src/zm.s
-
-# target to generate assembly for a file
-ate-pairing/src/zm.cpp.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm.cpp.s
-.PHONY : ate-pairing/src/zm.cpp.s
-
-ate-pairing/src/zm2.o: ate-pairing/src/zm2.cpp.o
-
-.PHONY : ate-pairing/src/zm2.o
-
-# target to build an object file
-ate-pairing/src/zm2.cpp.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm2.cpp.o
-.PHONY : ate-pairing/src/zm2.cpp.o
-
-ate-pairing/src/zm2.i: ate-pairing/src/zm2.cpp.i
-
-.PHONY : ate-pairing/src/zm2.i
-
-# target to preprocess a source file
-ate-pairing/src/zm2.cpp.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm2.cpp.i
-.PHONY : ate-pairing/src/zm2.cpp.i
-
-ate-pairing/src/zm2.s: ate-pairing/src/zm2.cpp.s
-
-.PHONY : ate-pairing/src/zm2.s
-
-# target to generate assembly for a file
-ate-pairing/src/zm2.cpp.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/zm.dir/build.make depends/libsnark/depends/CMakeFiles/zm.dir/ate-pairing/src/zm2.cpp.s
-.PHONY : ate-pairing/src/zm2.cpp.s
 
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.o: libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.o
 
@@ -246,7 +177,7 @@ libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.o: libsnark-superco
 
 # target to build an object file
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.o
 .PHONY : libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.o
 
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.i: libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.i
@@ -255,7 +186,7 @@ libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.i: libsnark-superco
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.i
 .PHONY : libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.i
 
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.s: libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.s
@@ -264,7 +195,7 @@ libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.s: libsnark-superco
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.s
 .PHONY : libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.c.s
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.o: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.o
@@ -273,7 +204,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.o: libsnark-supercop/src/cr
 
 # target to build an object file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.o
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.o
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.i: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.i
@@ -282,7 +213,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.i: libsnark-supercop/src/cr
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.i
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.i
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.s: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.s
@@ -291,7 +222,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.s: libsnark-supercop/src/cr
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.s
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash.c.s
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.o: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.o
@@ -300,7 +231,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.o: libsnark-supercop
 
 # target to build an object file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.o
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.o
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.i: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.i
@@ -309,7 +240,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.i: libsnark-supercop
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.i
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.i
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.s: libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.s
@@ -318,7 +249,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.s: libsnark-supercop
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.s
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/hash_sha256.c.s
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.o: libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.o
@@ -327,7 +258,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.o: libsnark-supercop/src/cr
 
 # target to build an object file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.o
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.o
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.i: libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.i
@@ -336,7 +267,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.i: libsnark-supercop/src/cr
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.i
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.i
 
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.s: libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.s
@@ -345,7 +276,7 @@ libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.s: libsnark-supercop/src/cr
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.s
 .PHONY : libsnark-supercop/src/crypto_hash/sha256/sphlib/sha2.c.s
 
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.o: libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.o
@@ -354,7 +285,7 @@ libsnark-supercop/src/crypto_hash/sha512/openssl/hash.o: libsnark-supercop/src/c
 
 # target to build an object file
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.o
 .PHONY : libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.o
 
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.i: libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.i
@@ -363,7 +294,7 @@ libsnark-supercop/src/crypto_hash/sha512/openssl/hash.i: libsnark-supercop/src/c
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.i
 .PHONY : libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.i
 
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.s: libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.s
@@ -372,7 +303,7 @@ libsnark-supercop/src/crypto_hash/sha512/openssl/hash.s: libsnark-supercop/src/c
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.s
 .PHONY : libsnark-supercop/src/crypto_hash/sha512/openssl/hash.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.o
@@ -381,7 +312,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.o: libsnark-superco
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.i
@@ -390,7 +321,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.i: libsnark-superco
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.s
@@ -399,7 +330,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.s: libsnark-superco
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/batch.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.s.o
@@ -408,7 +339,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.o: libsnark-supe
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/choose_t.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.s.o
@@ -417,7 +348,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.o: libsnark-superc
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/consts.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.o
@@ -426,7 +357,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.i
@@ -435,7 +366,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.i: libsnark-s
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.s
@@ -444,7 +375,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.s: libsnark-s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_add.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.s.o
@@ -453,7 +384,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_freeze.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.o
@@ -462,7 +393,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.i
@@ -471,7 +402,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.i: libs
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.s
@@ -480,7 +411,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.s: libs
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_getparity.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.o
@@ -489,7 +420,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.i
@@ -498,7 +429,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.s
@@ -507,7 +438,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_invert.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.o
@@ -516,7 +447,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.o: libsnark-
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.i
@@ -525,7 +456,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.i: libsnark-
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.s
@@ -534,7 +465,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.s: libsnark-
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iseq.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.o
@@ -543,7 +474,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.i
@@ -552,7 +483,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.s
@@ -561,7 +492,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_iszero.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.s.o
@@ -570,7 +501,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_mul.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.o
@@ -579,7 +510,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.i
@@ -588,7 +519,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.i: libsnark-s
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.s
@@ -597,7 +528,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.s: libsnark-s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_neg.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.s.o
@@ -606,7 +537,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.o: libsna
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_nsquare.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.o
@@ -615,7 +546,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.o: libsnark-
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.i
@@ -624,7 +555,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.i: libsnark-
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.s
@@ -633,7 +564,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.s: libsnark-
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pack.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.o
@@ -642,7 +573,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.o: libsna
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.i
@@ -651,7 +582,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.i: libsna
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.s
@@ -660,7 +591,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.s: libsna
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_pow2523.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.o
@@ -669,7 +600,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.i
@@ -678,7 +609,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.s
@@ -687,7 +618,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_setint.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.s.o
@@ -696,7 +627,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_square.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.o
@@ -705,7 +636,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.i
@@ -714,7 +645,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.i: libsnark-s
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.s
@@ -723,7 +654,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.s: libsnark-s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_sub.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.o
@@ -732,7 +663,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.i
@@ -741,7 +672,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.s
@@ -750,7 +681,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/fe25519_unpack.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.o
@@ -759,7 +690,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.i
@@ -768,7 +699,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.i: libsnark-s
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.s
@@ -777,7 +708,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.s: libsnark-s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.s.o
@@ -786,7 +717,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.o: libsn
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_add_p1p1.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.o
@@ -795,7 +726,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.o: libsnark-
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.i
@@ -804,7 +735,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.i: libsnark-
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.s
@@ -813,7 +744,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.s: libsnark-
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_base.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.s.o
@@ -822,7 +753,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.o: libsn
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_dbl_p1p1.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.o
@@ -831,7 +762,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.i
@@ -840,7 +771,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.s
@@ -849,7 +780,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.o
@@ -858,7 +789,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.i
@@ -867,7 +798,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.s
@@ -876,7 +807,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_double_scalarmult.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.o
@@ -885,7 +816,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.i
@@ -894,7 +825,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.i: libs
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.s
@@ -903,7 +834,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.s: libs
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_isneutral.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.o
@@ -912,7 +843,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.i
@@ -921,7 +852,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.s
@@ -930,7 +861,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_multi_scalarmult.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.s.o
@@ -939,7 +870,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd2.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.s.o
@@ -948,7 +879,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.o: 
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_nielsadd_p1p1.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.s.o
@@ -957,7 +888,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.o: lib
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p2.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.s.o
@@ -966,7 +897,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.o: lib
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_p3.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.s.o
@@ -975,7 +906,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.o:
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_p1p1_to_pniels.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.o
@@ -984,7 +915,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.o: libsnark-
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.i
@@ -993,7 +924,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.i: libsnark-
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.s
@@ -1002,7 +933,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.s: libsnark-
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pack.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.s.o
@@ -1011,7 +942,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.o:
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_pnielsadd_p1p1.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.o
@@ -1020,7 +951,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.o
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.i
@@ -1029,7 +960,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.i
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.s
@@ -1038,7 +969,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_scalarmult_base.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.o
@@ -1047,7 +978,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.i
@@ -1056,7 +987,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.i: libs
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.s
@@ -1065,7 +996,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.s: libs
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ge25519_unpackneg.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.s.o
@@ -1074,7 +1005,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.s.o
@@ -1083,7 +1014,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.o
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_1limb.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.s.o
@@ -1092,7 +1023,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_2limbs.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.s.o
@@ -1101,7 +1032,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/heap_rootreplaced_3limbs.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.o
@@ -1110,7 +1041,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.o: libsnark-supercop
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.i
@@ -1119,7 +1050,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.i: libsnark-supercop
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.s
@@ -1128,7 +1059,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.s: libsnark-supercop
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/hram.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.o
@@ -1137,7 +1068,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.o: libsnark-su
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.i
@@ -1146,7 +1077,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.i: libsnark-su
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.s
@@ -1155,7 +1086,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.s: libsnark-su
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/index_heap.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.o
@@ -1164,7 +1095,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.o: libsnark-super
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.i
@@ -1173,7 +1104,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.i: libsnark-super
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.s
@@ -1182,7 +1113,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.s: libsnark-super
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/keypair.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.o
@@ -1191,7 +1122,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.o: libsnark-supercop
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.i
@@ -1200,7 +1131,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.i: libsnark-supercop
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.s
@@ -1209,7 +1140,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.s: libsnark-supercop
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/open.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.s.o
@@ -1218,7 +1149,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_add.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.s.o
@@ -1227,7 +1158,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.o: libsna
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_barrett.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.o
@@ -1236,7 +1167,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.o: li
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.i
@@ -1245,7 +1176,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.i: li
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.s
@@ -1254,7 +1185,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.s: li
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from32bytes.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.o
@@ -1263,7 +1194,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.o: li
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.i
@@ -1272,7 +1203,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.i: li
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.s
@@ -1281,7 +1212,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.s: li
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from64bytes.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.o
@@ -1290,7 +1221,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.o: l
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.i
@@ -1299,7 +1230,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.i: l
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.s
@@ -1308,7 +1239,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.s: l
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_from_shortsc.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.o
@@ -1317,7 +1248,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.o: libsnar
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.i
@@ -1326,7 +1257,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.i: libsnar
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.s
@@ -1335,7 +1266,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.s: libsnar
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_iszero.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o
@@ -1344,7 +1275,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.o: libsnark-su
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.o
@@ -1353,7 +1284,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.o: libsnark-s
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.i
@@ -1362,7 +1293,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.i: libsnark-s
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.s
@@ -1371,7 +1302,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.s: libsnark-s
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.o
@@ -1380,7 +1311,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.o: li
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.i
@@ -1389,7 +1320,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.i: li
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.s
@@ -1398,7 +1329,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.s: li
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_mul_shortsc.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.o
@@ -1407,7 +1338,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.o: libsnark
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.i
@@ -1416,7 +1347,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.i: libsnark
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.s
@@ -1425,7 +1356,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.s: libsnark
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_slide.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o
@@ -1434,7 +1365,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.o
@@ -1443,7 +1374,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.o: libs
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.i
@@ -1452,7 +1383,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.i: libs
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.s
@@ -1461,7 +1392,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.s: libs
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_to32bytes.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.o
@@ -1470,7 +1401,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.o: libsna
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.i
@@ -1479,7 +1410,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.i: libsna
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.s
@@ -1488,7 +1419,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.s: libsna
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_window4.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.o
@@ -1497,7 +1428,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.o: libsnark-supercop
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.o
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.i: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.i
@@ -1506,7 +1437,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.i: libsnark-supercop
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.i
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.i
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.s: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.s
@@ -1515,7 +1446,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.s: libsnark-supercop
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.s
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sign.c.s
 
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.o: libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o
@@ -1524,7 +1455,7 @@ libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.o: libsnark-supe
 
 # target to build an object file
 libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o
 .PHONY : libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o
 
 libsnark-supercop/src/crypto_verify/16/ref/verify.o: libsnark-supercop/src/crypto_verify/16/ref/verify.c.o
@@ -1533,7 +1464,7 @@ libsnark-supercop/src/crypto_verify/16/ref/verify.o: libsnark-supercop/src/crypt
 
 # target to build an object file
 libsnark-supercop/src/crypto_verify/16/ref/verify.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.o
 .PHONY : libsnark-supercop/src/crypto_verify/16/ref/verify.c.o
 
 libsnark-supercop/src/crypto_verify/16/ref/verify.i: libsnark-supercop/src/crypto_verify/16/ref/verify.c.i
@@ -1542,7 +1473,7 @@ libsnark-supercop/src/crypto_verify/16/ref/verify.i: libsnark-supercop/src/crypt
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_verify/16/ref/verify.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.i
 .PHONY : libsnark-supercop/src/crypto_verify/16/ref/verify.c.i
 
 libsnark-supercop/src/crypto_verify/16/ref/verify.s: libsnark-supercop/src/crypto_verify/16/ref/verify.c.s
@@ -1551,7 +1482,7 @@ libsnark-supercop/src/crypto_verify/16/ref/verify.s: libsnark-supercop/src/crypt
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_verify/16/ref/verify.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/16/ref/verify.c.s
 .PHONY : libsnark-supercop/src/crypto_verify/16/ref/verify.c.s
 
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.o: libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.o
@@ -1560,7 +1491,7 @@ libsnark-supercop/src/crypto_verify/32/ref/verify_32.o: libsnark-supercop/src/cr
 
 # target to build an object file
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.o
 .PHONY : libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.o
 
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.i: libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.i
@@ -1569,7 +1500,7 @@ libsnark-supercop/src/crypto_verify/32/ref/verify_32.i: libsnark-supercop/src/cr
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.i
 .PHONY : libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.i
 
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.s: libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.s
@@ -1578,7 +1509,7 @@ libsnark-supercop/src/crypto_verify/32/ref/verify_32.s: libsnark-supercop/src/cr
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.s
 .PHONY : libsnark-supercop/src/crypto_verify/32/ref/verify_32.c.s
 
 libsnark-supercop/src/crypto_verify/8/ref/verify.o: libsnark-supercop/src/crypto_verify/8/ref/verify.c.o
@@ -1587,7 +1518,7 @@ libsnark-supercop/src/crypto_verify/8/ref/verify.o: libsnark-supercop/src/crypto
 
 # target to build an object file
 libsnark-supercop/src/crypto_verify/8/ref/verify.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.o
 .PHONY : libsnark-supercop/src/crypto_verify/8/ref/verify.c.o
 
 libsnark-supercop/src/crypto_verify/8/ref/verify.i: libsnark-supercop/src/crypto_verify/8/ref/verify.c.i
@@ -1596,7 +1527,7 @@ libsnark-supercop/src/crypto_verify/8/ref/verify.i: libsnark-supercop/src/crypto
 
 # target to preprocess a source file
 libsnark-supercop/src/crypto_verify/8/ref/verify.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.i
 .PHONY : libsnark-supercop/src/crypto_verify/8/ref/verify.c.i
 
 libsnark-supercop/src/crypto_verify/8/ref/verify.s: libsnark-supercop/src/crypto_verify/8/ref/verify.c.s
@@ -1605,7 +1536,7 @@ libsnark-supercop/src/crypto_verify/8/ref/verify.s: libsnark-supercop/src/crypto
 
 # target to generate assembly for a file
 libsnark-supercop/src/crypto_verify/8/ref/verify.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_verify/8/ref/verify.c.s
 .PHONY : libsnark-supercop/src/crypto_verify/8/ref/verify.c.s
 
 libsnark-supercop/src/randombytes.o: libsnark-supercop/src/randombytes.c.o
@@ -1614,7 +1545,7 @@ libsnark-supercop/src/randombytes.o: libsnark-supercop/src/randombytes.c.o
 
 # target to build an object file
 libsnark-supercop/src/randombytes.c.o:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.o
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.o
 .PHONY : libsnark-supercop/src/randombytes.c.o
 
 libsnark-supercop/src/randombytes.i: libsnark-supercop/src/randombytes.c.i
@@ -1623,7 +1554,7 @@ libsnark-supercop/src/randombytes.i: libsnark-supercop/src/randombytes.c.i
 
 # target to preprocess a source file
 libsnark-supercop/src/randombytes.c.i:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.i
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.i
 .PHONY : libsnark-supercop/src/randombytes.c.i
 
 libsnark-supercop/src/randombytes.s: libsnark-supercop/src/randombytes.c.s
@@ -1632,7 +1563,7 @@ libsnark-supercop/src/randombytes.s: libsnark-supercop/src/randombytes.c.s
 
 # target to generate assembly for a file
 libsnark-supercop/src/randombytes.c.s:
-	cd /root/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.s
+	cd /home/luzy/libsnark-tutorial/build && $(MAKE) -f depends/libsnark/depends/CMakeFiles/snark_supercop.dir/build.make depends/libsnark/depends/CMakeFiles/snark_supercop.dir/libsnark-supercop/src/randombytes.c.s
 .PHONY : libsnark-supercop/src/randombytes.c.s
 
 # Help Target
@@ -1642,19 +1573,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... snark_supercop"
-	@echo "... zm"
-	@echo "... install"
 	@echo "... edit_cache"
+	@echo "... snark_supercop"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... ate-pairing/src/zm.o"
-	@echo "... ate-pairing/src/zm.i"
-	@echo "... ate-pairing/src/zm.s"
-	@echo "... ate-pairing/src/zm2.o"
-	@echo "... ate-pairing/src/zm2.i"
-	@echo "... ate-pairing/src/zm2.s"
+	@echo "... install/local"
+	@echo "... install"
 	@echo "... libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.o"
 	@echo "... libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.i"
 	@echo "... libsnark-supercop/src/crypto_core/aes128encrypt/openssl/core.s"
@@ -1821,6 +1745,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/luzy/libsnark-tutorial/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

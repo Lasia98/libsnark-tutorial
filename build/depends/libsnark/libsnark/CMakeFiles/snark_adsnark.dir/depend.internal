@@ -76,5 +76,5 @@ depends/libsnark/libsnark/CMakeFiles/snark_adsnark.dir/common/default_types/r1cs
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.tcc
- /root/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkadsnark_pp.cpp
+ /home/luzy/libsnark-tutorial/depends/libsnark/libsnark/common/default_types/r1cs_ppzkadsnark_pp.cpp
  /usr/include/x86_64-linux-gnu/gmp.h
